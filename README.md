@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Neel Saswade — Portfolio
 
-## Getting Started
+A portfolio for a senior product designer, built on a graph-paper grid. Next.js (App Router) + Tailwind + Supabase.
 
-First, run the development server:
+## Features
+
+- **Interactive grid hero** — hover the glowing cell to flip open a reveal, which lights up the next cell somewhere else. Eight reveals deep: work, photography, play, and trivia.
+- **Your visitor bike** — every visitor gets a customizable SVG bike (frame, wheels, paint, decals, signature). It rides down the right edge of the page as you scroll, wheels spinning with scroll velocity. Click it anytime to re-customize.
+- **The Peloton** (`/peloton`) — a shared gallery of every visitor's bike, backed by Supabase.
+- Sections: Work (with case-study pages), Play, Photography, About.
+
+## Getting started
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Everything works without Supabase — bikes fall back to localStorage (visible only in your own browser).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Connecting Supabase (shared Peloton)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Create a project at [supabase.com](https://supabase.com).
+2. Run `supabase/schema.sql` in the SQL editor.
+3. Copy `.env.local.example` to `.env.local` and fill in your project URL and anon key (Settings → API).
+4. Restart the dev server. New bikes now save to the shared Peloton.
 
-## Learn More
+## Swapping in real content
 
-To learn more about Next.js, take a look at the following resources:
+- Case studies: `src/content/work.ts`
+- Play projects and photos: `src/content/misc.ts`
+- Grid reveal chain (what each discovery shows): `src/components/hero/reveals.ts`
+- Bike options (frames, paints, decals): `src/lib/bike-types.ts` and `src/components/bike/BikeSvg.tsx`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Placeholder covers are CSS gradients; replace `cover` values with image URLs and swap the `div`s for `next/image` when real assets are ready.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deploying
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Push to GitHub and import into [Vercel](https://vercel.com). Add the two `NEXT_PUBLIC_SUPABASE_*` env vars in the Vercel project settings.
