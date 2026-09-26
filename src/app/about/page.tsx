@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export const metadata = { title: "About — Neel Saswade" };
 
 export default function About() {
@@ -20,14 +18,7 @@ export default function About() {
           never notice but everyone feels.
         </p>
         <p>
-          Off-screen I&apos;m on a bike. Road, gravel, whatever&apos;s outside —
-          which is why every visitor to this site gets a bike of their own.
-          Haven&apos;t built yours yet? Click the bike riding down the edge of
-          your screen, or visit{" "}
-          <Link href="/peloton" className="underline decoration-ink/30 hover:decoration-ink">
-            the Peloton
-          </Link>{" "}
-          to meet everyone who rode through before you.
+          Off-screen I&apos;m on a bike. Road, gravel, whatever&apos;s outside.
         </p>
       </div>
       <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-4">

@@ -60,7 +60,7 @@ export const REVEALS: Reveal[] = [
     kind: "fact",
     label: "12,000 km",
     sub: "Ridden this year, and counting",
-    href: "/peloton",
+    href: "/about",
     gradient: "linear-gradient(180deg, #e8b93c, #a67c14)",
   },
   {
@@ -85,9 +85,9 @@ export const REVEALS: Reveal[] = [
     trigger: { row: 8, col: 22 },
     region: { row: 6, col: 21, w: 3, h: 4 },
     kind: "fact",
-    label: "The Peloton",
-    sub: "You found it all — meet every visitor's bike",
-    href: "/peloton",
+    label: "About",
+    sub: "You found it all",
+    href: "/about",
     gradient: "linear-gradient(135deg, #1c1b18, #4d4a42)",
   },
 ];

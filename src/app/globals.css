@@ -17,7 +17,6 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-serif: var(--font-newsreader);
-  --font-script: var(--font-caveat);
 }
 
 html {
@@ -93,8 +92,5 @@ body {
   .hint-cell {
     animation: none;
     background-color: color-mix(in srgb, var(--accent) 30%, transparent);
-  }
-  .scroll-bike {
-    transition: none !important;
   }
 }

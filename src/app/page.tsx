@@ -46,14 +46,8 @@ export default function Home() {
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-2 px-4 text-center">
           <p className="font-serif italic">Neel Saswade</p>
           <p className="font-mono text-[10px] uppercase tracking-widest text-ink-soft">
-            Designed on graph paper · Built with a bike bell
+            Designed on graph paper
           </p>
-          <Link
-            href="/peloton"
-            className="mt-2 font-mono text-[11px] uppercase tracking-widest underline decoration-ink/30 hover:decoration-ink"
-          >
-            See the Peloton →
-          </Link>
         </div>
       </footer>
     </>

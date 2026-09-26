@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import { HeroBike } from "@/components/bike/HeroBike";
 import { COLS, ROWS, REVEALS, type Reveal } from "./reveals";
 
 export function HeroGrid() {
@@ -129,9 +128,6 @@ export function HeroGrid() {
           <p className="mt-3 font-mono text-[11px] uppercase tracking-[0.3em] text-ink-soft">
             Senior Product Designer
           </p>
-        </div>
-        <div className="pointer-events-auto">
-          <HeroBike />
         </div>
       </div>
 
